@@ -12,5 +12,5 @@ export const rotasConfig: Routes = [
     { path: 'contato', component: ContatoComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'teste-dados', component: DadosComponent },
-    { path: 'observadoras', component: ObservadoraComponent }
+    { path: 'observadoras', component: ObservadoraComponent },
 ];

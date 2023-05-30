@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class DadosComponent {
 
-  nome: String = "Teste";
+  nome: String = "";
+  sobrenome: String = "Medeiros";
 
   linkSite: String = "https://www.google.com";
 
@@ -19,9 +20,23 @@ export class DadosComponent {
   };
   */
 
-  contador: numero = 0;
+  contador: number = 0;
+
   adicionaUm() {
     this.contador++;
+  }
+
+  menosUm() {
+    this.contador--;
+  }
+
+  zerarContador() {
+    this.contador = 0;
+  }
+
+  teclar(event: any) {
+    console.log(event.target.value)
+    this.nome = event.target.value
   }
 
 }

@@ -1,6 +1,26 @@
+<br>
+<br>
+<br>
+
 <p>Nome: {{ nome }}</p>
+<p>Sobrenome: {{ sobrenome }}</p>
 
 <a [href]="linkSite"></a>
 <img [src]="linkDaImagem" alt="">
-
+<br>
+<button class="btn btn-info" [disabled]="contador < 5">Teste</button>
 <button (click)="adicionaUm()">Somar + 1</button>
+<br>
+<br>
+<p>O valor do contados é {{ contador }}</p>
+<br>
+<button class="btn btn-danger" (click)="zerarContador()">Zerar</button>
+<br>
+<br>
+<input type="text" (keyup)="teclar($event)" placeholder="Digite seu nome">;
+<br>
+<br>
+<label>Seu nome é {{ nome }}</label>
+<br>
+<br>
+<input type="text" [(ngModel)]="nome" placeholder="Digital seu nome">

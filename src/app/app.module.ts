@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ObservadoraComponent } from './navegacao/observadora/observadora.component';
 import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.component';
 import { ClinicaService } from './clinicas/clinica.service';
-import { HttpClientModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({

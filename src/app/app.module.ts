@@ -14,6 +14,10 @@ import { rotasConfig } from './app.routes';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ObservadoraComponent } from './navegacao/observadora/observadora.component';
+import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.component';
+import { ClinicaService } from './clinicas/clinica.service';
+import { HttpClientModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -24,14 +28,18 @@ import { ObservadoraComponent } from './navegacao/observadora/observadora.compon
     HomeComponent,
     FooterComponent,
     DadosComponent,
-    ObservadoraComponent
+    ObservadoraComponent,
+    ListaClinicaComponent
   ],
   imports: [
     BrowserModule,
     [RouterModule.forRoot(rotasConfig)],
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
+  /*fora*/
   providers: [
+    ClinicaService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]

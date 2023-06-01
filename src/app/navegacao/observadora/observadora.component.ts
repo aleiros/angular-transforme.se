@@ -17,6 +17,7 @@ export class ObservadoraComponent implements OnInit {
 
     return new Observable(subscribe => {
       subscribe.next("Olá!");
+      subscribe.next("Olá de novo");
     })
   }
 }

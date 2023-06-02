@@ -20,7 +20,5 @@ constructor(private clinicaService: ClinicaService) {}
     },
     erro => console.log(erro)
     )
-   
   }
 }
-@crossOriginIsolated(origin = "http://localhost:4200")

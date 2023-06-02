@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { ObservadoraComponent } from './navegacao/observadora/observadora.component';
 import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.component';
 import { ClinicaService } from './clinicas/clinica.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-paciente.component'
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http'
     FooterComponent,
     DadosComponent,
     ObservadoraComponent,
-    ListaClinicaComponent
+    ListaClinicaComponent,
+    ListaPacienteComponent
   ],
   imports: [
     BrowserModule,

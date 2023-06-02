@@ -18,6 +18,7 @@ import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.co
 import { ClinicaService } from './clinicas/clinica.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-paciente.component'
+import { PacienteService } from './pacientes/paciente.service';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-pacient
   /*fora*/
   providers: [
     ClinicaService,
+    PacienteService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ export class ClinicaService {
     constructor(private http: HttpClient) { }
 
 
-    private apiURL : string = 'http://localhost:8081/';
+    private apiURL : string = 'http://localhost:8080/';
 
     listarClinicas() : Observable<Clinica[]> {
         return this.http.get<Clinica[]>(this.apiURL + "clinicas");

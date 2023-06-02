@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http'
 import { Observable } from "rxjs";
-import { Paciente } from "./Paciente";
+import { Paciente } from "./paciente";
 
 @Injectable()
 export class PacienteService {
@@ -11,7 +11,7 @@ export class PacienteService {
 
     private apiURL : string = 'http://localhost:8080/';
 
-    listarClinicas() : Observable<Paciente[]> {
+    listarPacientes() : Observable<Paciente[]> {
         return this.http.get<Paciente[]>(this.apiURL + "pacientes");
     }
 

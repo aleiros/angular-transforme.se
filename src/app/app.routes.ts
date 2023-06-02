@@ -5,6 +5,7 @@ import { SobreComponent } from './empresa/sobre/sobre.component';
 import { DadosComponent } from './teste/dados/dados.component';
 import { ObservadoraComponent } from './navegacao/observadora/observadora.component';
 import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.component';
+import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-paciente.component';
 
 export const rotasConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,4 +16,5 @@ export const rotasConfig: Routes = [
     { path: 'teste-dados', component: DadosComponent },
     { path: 'observadoras', component: ObservadoraComponent },
     { path: 'clinicas', component: ListaClinicaComponent },
+    { path: 'pacientes', component: ListaPacienteComponent},
 ];

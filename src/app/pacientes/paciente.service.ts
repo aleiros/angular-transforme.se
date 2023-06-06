@@ -15,4 +15,11 @@ export class PacienteService {
         return this.http.get<Paciente[]>(this.apiURL + "pacientes");
     }
 
+    salvar(paciente: Paciente) : Observable<Paciente> {
+        return this.http.post<Paciente>(this.apiURL + "pacientes", paciente);
+    }
+
+    deletar(id: number): Observable<void> {
+        return this.http.delete<void>(this.apiURL + "pacientes/" + id);
+    }
 }

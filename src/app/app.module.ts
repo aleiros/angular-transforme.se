@@ -12,13 +12,14 @@ import { DadosComponent } from './teste/dados/dados.component';
 import { RouterModule } from '@angular/router';
 import { rotasConfig } from './app.routes';
 import { APP_BASE_HREF } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ObservadoraComponent } from './navegacao/observadora/observadora.component';
 import { ListaClinicaComponent } from './clinicas/lista-clinica/lista-clinica.component';
 import { ClinicaService } from './clinicas/clinica.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-paciente.component'
 import { PacienteService } from './pacientes/paciente.service';
+import { CadastroPacienteComponent } from './pacientes/cadastro-paciente/cadastro-paciente.component';
 
 
 @NgModule({
@@ -32,13 +33,15 @@ import { PacienteService } from './pacientes/paciente.service';
     DadosComponent,
     ObservadoraComponent,
     ListaClinicaComponent,
-    ListaPacienteComponent
+    ListaPacienteComponent,
+    CadastroPacienteComponent
   ],
   imports: [
     BrowserModule,
     [RouterModule.forRoot(rotasConfig)],
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   /*fora*/
   providers: [

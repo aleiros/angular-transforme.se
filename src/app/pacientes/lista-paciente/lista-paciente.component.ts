@@ -14,11 +14,24 @@ constructor(private pacienteService: PacienteService) {}
   public pacientes!: Paciente[];
 
   ngOnInit(): void {
+
+    this.listarPaciente()
+  }
+
+  listarPaciente() {
+
     this.pacienteService.listarPacientes().subscribe(pacientesRecebidas => {
       this.pacientes = pacientesRecebidas
       console.log(this.pacientes);
     },
     erro => console.log(erro)
     )
+  }
+
+
+  excluir(paciente: Paciente) {
+    this.pacienteService.deletar(paciente.id).subscribe({
+      next: () =>  this.listarPaciente()
+    })
   }
 }

@@ -15,4 +15,14 @@ export class ClinicaService {
         return this.http.get<Clinica[]>(this.apiURL + "clinicas");
     }
 
+    listarPorId(id: number) : Observable<Clinica> {
+
+         // http://localhost:8080/clinicas/id
+        return this.http.get<Clinica>(this.apiURL + "clinicas/" + id);
+    }
+
+    atualizarClinica(id: number, clinica: any) : Observable<Clinica> {
+        return this.http.put<Clinica>(this.apiURL + "clinicas/" + id, clinica);
+    }
+
 }

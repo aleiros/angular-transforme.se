@@ -8,6 +8,7 @@ import { ClinicaService } from '../clinica.service';
   styleUrls: ['./lista-clinica.component.css']
 })
 export class ListaClinicaComponent implements OnInit {
+clinica: any;
 
 constructor(private clinicaService: ClinicaService) {}
 

@@ -1,0 +1,23 @@
+<div class="container main-container">
+    <h4>Cadastro Clínica</h4>
+    <hr />
+    <form novalidate (ngSubmit)="atualizarClinica()" [formGroup]="atualizaForm">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="nome">Nome da clínica</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
+                        formControlName="nome" value="{{clinica.nome}}" [(ngModel)]="clinica.nome" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2">
+                    <span><button class="btn btn-success" id="Registrar" type="submit">Atualizar</button></span>
+                    <a [routerLink]="['/clinicas']" class="btn btn-primary">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

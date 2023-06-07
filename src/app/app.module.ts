@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaPacienteComponent } from './pacientes/lista-paciente/lista-paciente.component'
 import { PacienteService } from './pacientes/paciente.service';
 import { CadastroPacienteComponent } from './pacientes/cadastro-paciente/cadastro-paciente.component';
+import { ClinicaDetalheComponent } from './clinicas/clinica-detalhe/clinica-detalhe.component';
+import { AtualizarClinicaComponent } from './clinicas/atualizar-clinica/atualizar-clinica.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { CadastroPacienteComponent } from './pacientes/cadastro-paciente/cadastr
     ObservadoraComponent,
     ListaClinicaComponent,
     ListaPacienteComponent,
-    CadastroPacienteComponent
+    CadastroPacienteComponent,
+    ClinicaDetalheComponent,
+    AtualizarClinicaComponent
   ],
   imports: [
     BrowserModule,

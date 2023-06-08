@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Paciente } from '../paciente';
 import { PacienteService } from '../paciente.service';
 
@@ -19,7 +19,7 @@ export class CadastroPacienteComponent implements OnInit {
 
     this.cadastroForm = new FormGroup({
 
-      nome: new FormControl(''),
+      nome: new FormControl('', Validators.required),
       cpf: new FormControl(''),
       email: new FormControl(''),
       senha: new FormControl(''),
@@ -30,8 +30,8 @@ export class CadastroPacienteComponent implements OnInit {
   }
 
   adicionarPaciente() {
-    let valores = this.cadastroForm.value;
-    console.log(valores)
+    //let valores = this.cadastroForm.value;
+    //console.log(valores)
 
     this.paciente = Object.assign({}, this.paciente, this.cadastroForm.value)
     

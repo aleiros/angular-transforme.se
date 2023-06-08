@@ -6,7 +6,12 @@
             <div class="form-group">
                 <label class="col-md-2 control-label" for="nome">Nome da clínica</label>
                 <div class="col-md-10">
-                    <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"  formControlName="nome" />
+                    <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"  formControlName="nome" 
+                    [ngClass]="{'is-invalid': cadastroForm.get('nome')?.errors}"
+                    />
+                    <span class="text-danger" *ngIf="cadastroForm.get('nome')?.errors && (cadastroForm.get('nome')?.dirty || cadastroForm.get('nome')?.touched)">
+                        <p>O nome é Obrigatorio</p>
+                    </span>
                 </div>
             </div>
             <div class="form-group">
@@ -51,6 +56,7 @@
                     <span><button class="btn btn-success" id="Registrar" type="submit">Registrar</button></span>
                 </div>
             </div>
+            <p>O formulário é válido? {{ cadastroForm.valid}}</p>
         </div>
     </form>
 </div>
